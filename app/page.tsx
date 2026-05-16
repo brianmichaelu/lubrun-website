@@ -226,7 +226,7 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section className="bg-gray-100 py-24">
+     <section id="services" className="bg-gray-100 py-24">
         <div className="mx-auto max-w-7xl px-6">
 
           <div className="max-w-3xl">
