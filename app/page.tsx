@@ -261,6 +261,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PORTFOLIO */}
+<section className="bg-white py-24">
+  <div className="mx-auto max-w-7xl px-6">
+
+    <div className="max-w-3xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+        Our Work
+      </p>
+
+      <h2 className="mt-5 text-5xl font-black text-[#0A2540]">
+        Professional Branding & Printing Solutions
+      </h2>
+
+      <p className="mt-6 text-lg leading-8 text-gray-600">
+        We provide high-quality branding solutions tailored
+        for businesses, institutions, schools, NGOs,
+        hospitality brands, and corporate organizations.
+      </p>
+    </div>
+
+    <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+
+      <div className="rounded-[2rem] bg-[#0A2540] p-10 text-white shadow-xl">
+        <h3 className="text-2xl font-black text-[#D4AF37]">
+          Corporate Uniforms
+        </h3>
+
+        <p className="mt-5 leading-7 text-gray-300">
+          Premium uniforms designed for professional
+          presentation and brand consistency.
+        </p>
+      </div>
+
+      <div className="rounded-[2rem] bg-gray-100 p-10 shadow-xl">
+        <h3 className="text-2xl font-black text-[#0A2540]">
+          Promotional Products
+        </h3>
+
+        <p className="mt-5 leading-7 text-gray-600">
+          Branded merchandise including mugs, caps,
+          flyers, banners, and event materials.
+        </p>
+      </div>
+
+      <div className="rounded-[2rem] bg-[#D4AF37] p-10 text-black shadow-xl">
+        <h3 className="text-2xl font-black">
+          Bulk Printing Services
+        </h3>
+
+        <p className="mt-5 leading-7">
+          Reliable large-scale printing solutions
+          for institutions and organizations.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
       {/* CTA */}
       <section id="contact" className="bg-[#0A2540] py-24 text-white">
         <div className="mx-auto max-w-5xl px-6 text-center">
@@ -309,6 +369,14 @@ export default function Home() {
             <p className="mt-2 text-gray-600">
               Bring Your Brand To Life
             </p>
+
+            <p className="mt-4 text-sm text-gray-600">
+  +255 689 824 682
+</p>
+
+<p className="text-sm text-gray-600">
+  lubrun.enterprises@gmail.com
+</p>
           </div>
 
           <div className="text-sm text-gray-500">
