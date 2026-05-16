@@ -389,7 +389,7 @@ export default function Home() {
         />
 
         <textarea
-          rows="5"
+          rows={5}
           placeholder="Tell us about your project..."
           className="w-full rounded-2xl border border-gray-200 px-5 py-4"
         ></textarea>
