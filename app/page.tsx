@@ -323,7 +323,6 @@ export default function Home() {
 
       {/* CTA */}
       <section id="contact" className="bg-[#0A2540] py-24 text-white">
-       <section id="contact" className="bg-[#0A2540] py-24 text-white">
   <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
 
     {/* LEFT SIDE */}
