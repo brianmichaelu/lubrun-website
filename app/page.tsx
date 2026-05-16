@@ -20,6 +20,59 @@ export default function Home() {
 
   return (
     <main className="bg-white text-gray-900">
+      {/* HEADER */}
+<header className="sticky top-0 z-50 border-b border-white/10 bg-[#071421]/95 backdrop-blur">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+
+    {/* LOGO */}
+    <div className="flex items-center gap-3">
+      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D4AF37] text-xl font-black text-black">
+        LR
+      </div>
+
+      <div>
+        <h1 className="text-lg font-black text-white">
+          LUB RUN ENTERPRISES
+        </h1>
+
+        <p className="text-xs text-gray-400">
+          Bring Your Brand To Life
+        </p>
+      </div>
+    </div>
+
+    {/* NAVIGATION */}
+    <nav className="hidden items-center gap-8 text-sm font-semibold text-white lg:flex">
+      <a href="#" className="hover:text-[#D4AF37]">
+        Home
+      </a>
+
+      <a href="#services" className="hover:text-[#D4AF37]">
+        Services
+      </a>
+
+      <a href="#about" className="hover:text-[#D4AF37]">
+        About
+      </a>
+
+      <a href="#contact" className="hover:text-[#D4AF37]">
+        Contact
+      </a>
+
+      <button className="rounded-full border border-white/20 px-4 py-2 text-xs">
+        EN | SW
+      </button>
+
+      <a
+        href="https://wa.me/255689824682"
+        className="rounded-full bg-[#D4AF37] px-5 py-3 text-black"
+      >
+        WhatsApp
+      </a>
+    </nav>
+
+  </div>
+</header>
 
       {/* HERO */}
       <section className="min-h-screen bg-gradient-to-br from-[#071421] via-[#0A2540] to-[#102F4E] text-white">
@@ -100,7 +153,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section id="about" className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
 
           <div>
@@ -209,7 +262,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#0A2540] py-24 text-white">
+      <section id="contact" className="bg-[#0A2540] py-24 text-white">
         <div className="mx-auto max-w-5xl px-6 text-center">
 
           <h2 className="text-5xl font-black leading-tight">
