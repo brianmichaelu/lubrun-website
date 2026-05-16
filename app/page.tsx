@@ -322,13 +322,12 @@ export default function Home() {
 </section>
 
       {/* CTA */}
-      <section id="contact" className="bg-[#0A2540] py-24 text-white">
-  
-  <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
 
-    {/* LEFT SIDE */}
+      {/* CONTACT */}
+<section id="contact" className="bg-[#0A2540] py-24 text-white">
+  <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+
     <div>
-
       <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
         Contact Us
       </p>
@@ -338,12 +337,11 @@ export default function Home() {
       </h2>
 
       <p className="mt-8 text-lg leading-8 text-gray-300">
-        Tell us about your branding, printing, uniform,
-        or promotional material requirements and our
-        team will get back to you promptly.
+        Tell us about your branding, uniforms,
+        printing, or promotional material needs.
       </p>
 
-      <div className="mt-10 space-y-6">
+      <div className="mt-10 space-y-5">
 
         <div>
           <h4 className="font-bold text-[#D4AF37]">
@@ -365,77 +363,40 @@ export default function Home() {
           </p>
         </div>
 
-        <div>
-          <h4 className="font-bold text-[#D4AF37]">
-            Services
-          </h4>
-
-          <p className="mt-2 text-gray-300">
-            Corporate uniforms, t-shirt printing,
-            promotional products, and bulk branding solutions.
-          </p>
-        </div>
-
       </div>
-
     </div>
 
-    {/* FORM */}
     <div className="rounded-[2rem] bg-white p-10 text-black shadow-2xl">
 
       <form className="space-y-6">
 
-        <div>
-          <label className="mb-2 block text-sm font-bold">
-            Full Name
-          </label>
+        <input
+          type="text"
+          placeholder="Full Name"
+          className="w-full rounded-2xl border border-gray-200 px-5 py-4"
+        />
 
-          <input
-            type="text"
-            placeholder="Your name"
-            className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
-          />
-        </div>
+        <input
+          type="email"
+          placeholder="Email Address"
+          className="w-full rounded-2xl border border-gray-200 px-5 py-4"
+        />
 
-        <div>
-          <label className="mb-2 block text-sm font-bold">
-            Email Address
-          </label>
+        <input
+          type="text"
+          placeholder="Phone Number"
+          className="w-full rounded-2xl border border-gray-200 px-5 py-4"
+        />
 
-          <input
-            type="email"
-            placeholder="you@example.com"
-            className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
-          />
-        </div>
-
-        <div>
-          <label className="mb-2 block text-sm font-bold">
-            Phone Number
-          </label>
-
-          <input
-            type="text"
-            placeholder="+255..."
-            className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
-          />
-        </div>
-
-        <div>
-          <label className="mb-2 block text-sm font-bold">
-            Project Details
-          </label>
-
-          <textarea
-            rows="5"
-            placeholder="Tell us about your project..."
-            className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
-          ></textarea>
-        </div>
+        <textarea
+          rows="5"
+          placeholder="Tell us about your project..."
+          className="w-full rounded-2xl border border-gray-200 px-5 py-4"
+        ></textarea>
 
         <button
           type="submit"
-          className="w-full rounded-2xl bg-[#0A2540] px-6 py-4 font-bold text-white transition hover:bg-[#071421]"
+          className="w-full rounded-2xl bg-[#0A2540] px-6 py-4 font-bold text-white"
         >
           Submit Inquiry
         </button>
@@ -445,7 +406,7 @@ export default function Home() {
     </div>
 
   </div>
-      </section>
+</section>
 
       {/* FOOTER */}
       <footer className="bg-gray-100 border-t">
