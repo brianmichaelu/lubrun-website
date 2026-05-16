@@ -323,38 +323,129 @@ export default function Home() {
 
       {/* CTA */}
       <section id="contact" className="bg-[#0A2540] py-24 text-white">
-        <div className="mx-auto max-w-5xl px-6 text-center">
+       <section id="contact" className="bg-[#0A2540] py-24 text-white">
+  <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:items-center">
 
-          <h2 className="text-5xl font-black leading-tight">
-            Ready To Elevate Your Brand?
-          </h2>
+    {/* LEFT SIDE */}
+    <div>
 
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-300">
-            Whether you need uniforms, t-shirt printing,
-            promotional products, or large-scale corporate
-            branding, Lub Run Enterprises is ready to support
-            your organization.
+      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+        Contact Us
+      </p>
+
+      <h2 className="mt-5 text-5xl font-black leading-tight">
+        Request A Quote
+      </h2>
+
+      <p className="mt-8 text-lg leading-8 text-gray-300">
+        Tell us about your branding, printing, uniform,
+        or promotional material requirements and our
+        team will get back to you promptly.
+      </p>
+
+      <div className="mt-10 space-y-6">
+
+        <div>
+          <h4 className="font-bold text-[#D4AF37]">
+            Phone
+          </h4>
+
+          <p className="mt-2 text-gray-300">
+            +255 689 824 682
           </p>
-
-          <div className="mt-10 flex flex-wrap justify-center gap-5">
-
-            <a
-              href="https://wa.me/255689824682"
-              className="rounded-2xl bg-[#D4AF37] px-8 py-4 font-bold text-black shadow-xl"
-            >
-              Chat on WhatsApp
-            </a>
-
-            <a
-              href={"mailto:lubrun.enterprises@gmail.com"}
-              className="rounded-2xl border border-white/20 px-8 py-4 font-bold"
-            >
-              Send Email
-            </a>
-
-          </div>
-
         </div>
+
+        <div>
+          <h4 className="font-bold text-[#D4AF37]">
+            Email
+          </h4>
+
+          <p className="mt-2 text-gray-300">
+            lubrun.enterprises@gmail.com
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-bold text-[#D4AF37]">
+            Services
+          </h4>
+
+          <p className="mt-2 text-gray-300">
+            Corporate uniforms, t-shirt printing,
+            promotional products, and bulk branding solutions.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* FORM */}
+    <div className="rounded-[2rem] bg-white p-10 text-black shadow-2xl">
+
+      <form className="space-y-6">
+
+        <div>
+          <label className="mb-2 block text-sm font-bold">
+            Full Name
+          </label>
+
+          <input
+            type="text"
+            placeholder="Your name"
+            className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
+          />
+        </div>
+
+        <div>
+          <label className="mb-2 block text-sm font-bold">
+            Email Address
+          </label>
+
+          <input
+            type="email"
+            placeholder="you@example.com"
+            className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
+          />
+        </div>
+
+        <div>
+          <label className="mb-2 block text-sm font-bold">
+            Phone Number
+          </label>
+
+          <input
+            type="text"
+            placeholder="+255..."
+            className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
+          />
+        </div>
+
+        <div>
+          <label className="mb-2 block text-sm font-bold">
+            Project Details
+          </label>
+
+          <textarea
+            rows="5"
+            placeholder="Tell us about your project..."
+            className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          className="w-full rounded-2xl bg-[#0A2540] px-6 py-4 font-bold text-white transition hover:bg-[#071421]"
+        >
+          Submit Inquiry
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
       </section>
 
       {/* FOOTER */}
