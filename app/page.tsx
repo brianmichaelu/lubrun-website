@@ -409,33 +409,131 @@ export default function Home() {
 </section>
 
       {/* FOOTER */}
-      <footer className="bg-gray-100 border-t">
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-10 md:flex-row md:items-center md:justify-between">
+     <footer className="bg-black py-20 text-white">
+  <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-4">
 
-          <div>
-            <h3 className="text-2xl font-black text-[#0A2540]">
-              LUB RUN ENTERPRISES
-            </h3>
+    {/* BRAND */}
+    <div>
 
-            <p className="mt-2 text-gray-600">
-              Bring Your Brand To Life
-            </p>
+      <div className="flex items-center gap-3">
 
-            <p className="mt-4 text-sm text-gray-600">
-  +255 689 824 682
-</p>
-
-<p className="text-sm text-gray-600">
-  lubrun.enterprises@gmail.com
-</p>
-          </div>
-
-          <div className="text-sm text-gray-500">
-            © 2026 Lub Run Enterprises. All rights reserved.
-          </div>
-
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D4AF37] text-xl font-black text-black">
+          LR
         </div>
-      </footer>
+
+        <div>
+          <h3 className="text-xl font-black">
+            LUB RUN ENTERPRISES
+          </h3>
+
+          <p className="text-sm text-gray-400">
+            Bring Your Brand To Life
+          </p>
+        </div>
+
+      </div>
+
+      <p className="mt-6 leading-7 text-gray-400">
+        Premium branding, printing, uniforms,
+        promotional materials, and corporate identity solutions.
+      </p>
+
+    </div>
+
+    {/* SERVICES */}
+    <div>
+
+      <h4 className="text-lg font-bold text-[#D4AF37]">
+        Services
+      </h4>
+
+      <ul className="mt-6 space-y-4 text-gray-400">
+
+        <li>T-Shirt Printing</li>
+
+        <li>Corporate Uniforms</li>
+
+        <li>Promotional Products</li>
+
+        <li>Bulk Printing</li>
+
+        <li>Branding Solutions</li>
+
+      </ul>
+
+    </div>
+
+    {/* QUICK LINKS */}
+    <div>
+
+      <h4 className="text-lg font-bold text-[#D4AF37]">
+        Quick Links
+      </h4>
+
+      <ul className="mt-6 space-y-4 text-gray-400">
+
+        <li>
+          <a href="#">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#about">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#services">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    {/* CONTACT */}
+    <div>
+
+      <h4 className="text-lg font-bold text-[#D4AF37]">
+        Contact
+      </h4>
+
+      <div className="mt-6 space-y-5 text-gray-400">
+
+        <p>
+          +255 689 824 682
+        </p>
+
+        <p>
+          lubrun.enterprises@gmail.com
+        </p>
+
+        <p>
+          Dar es Salaam, Tanzania
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* BOTTOM */}
+  <div className="mx-auto mt-16 max-w-7xl border-t border-white/10 px-6 pt-8 text-center text-sm text-gray-500">
+
+    © 2026 Lub Run Enterprises. All rights reserved.
+
+  </div>
+</footer>
 
     </main>
   );
