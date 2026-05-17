@@ -123,6 +123,49 @@ export default function Home() {
   <div className="rounded-full border border-white/20 px-5 py-3">
     Uniform Solutions
   </div>
+  <div className="mt-16 grid gap-8 md:grid-cols-4">
+
+  <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur">
+    <h3 className="text-4xl font-black text-[#D4AF37]">
+      500+
+    </h3>
+
+    <p className="mt-3 text-sm uppercase tracking-[0.2em] text-gray-300">
+      Projects Completed
+    </p>
+  </div>
+
+  <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur">
+    <h3 className="text-4xl font-black text-[#D4AF37]">
+      120+
+    </h3>
+
+    <p className="mt-3 text-sm uppercase tracking-[0.2em] text-gray-300">
+      Corporate Clients
+    </p>
+  </div>
+
+  <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur">
+    <h3 className="text-4xl font-black text-[#D4AF37]">
+      5+
+    </h3>
+
+    <p className="mt-3 text-sm uppercase tracking-[0.2em] text-gray-300">
+      Years Experience
+    </p>
+  </div>
+
+  <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 backdrop-blur">
+    <h3 className="text-4xl font-black text-[#D4AF37]">
+      24/7
+    </h3>
+
+    <p className="mt-3 text-sm uppercase tracking-[0.2em] text-gray-300">
+      Customer Support
+    </p>
+  </div>
+
+</div>
 
 </div>
 
