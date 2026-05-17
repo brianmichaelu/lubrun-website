@@ -75,7 +75,7 @@ export default function Home() {
 
       <a
         href="https://wa.me/255689824682"
-        className="rounded-full bg-[#D4AF37] px-5 py-3 text-black"
+        className="rounded-full bg-[#D4AF37] px-5 py-3 text-black transition hover:scale-105"
       >
         WhatsApp
       </a>
@@ -457,7 +457,7 @@ export default function Home() {
 
         <button
           type="submit"
-          className="w-full rounded-2xl bg-[#0A2540] px-6 py-4 font-bold text-white"
+         className="rounded-full bg-[#D4AF37] px-5 py-3 text-black transition hover:scale-105"
         >
           Submit Inquiry
         </button>
