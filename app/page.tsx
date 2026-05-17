@@ -46,7 +46,7 @@ export default function Home() {
         </h1>
 
         <p className="text-xs text-gray-400">
-          Bring Your Life
+          Bring Your Brand Life
         </p>
       </div>
     </div>
