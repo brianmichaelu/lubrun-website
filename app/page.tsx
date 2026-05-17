@@ -89,12 +89,32 @@ export default function Home() {
               Identity Solutions
           </h1>
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-300">
-              Lub Run Enterprises delivers professional printing,
-              uniforms, branding, and promotional materials for
-              businesses, schools, NGOs, hotels, and organizations
-              across Tanzania.
-            </p>
+            <p className="mt-8 max-w-3xl text-xl leading-9 text-gray-300">
+              Lub Run Enterprises delivers high-quality t-shirt printing,
+              uniforms, promotional products, branding solutions,
+              and large-scale corporate printing services tailored
+              for businesses, institutions, and organizations.
+          </p>
+
+              <div className="mt-10 flex flex-wrap gap-4 text-sm font-semibold text-white">
+
+  <div className="rounded-full border border-white/20 px-5 py-3">
+    Corporate Branding
+  </div>
+
+  <div className="rounded-full border border-white/20 px-5 py-3">
+    Bulk Printing
+  </div>
+
+  <div className="rounded-full border border-white/20 px-5 py-3">
+    Promotional Products
+  </div>
+
+  <div className="rounded-full border border-white/20 px-5 py-3">
+    Uniform Solutions
+  </div>
+
+</div>
 
             <div className="mt-10 flex flex-wrap gap-5">
               <a
