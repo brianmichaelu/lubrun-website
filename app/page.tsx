@@ -457,6 +457,7 @@ export default function Home() {
 
         <button
           type="submit"
+         className="w-full cursor-pointer rounded-2xl bg-[#0A2540] px-6 py-4 font-bold text-white transition hover:bg-[#071421]"
          className="rounded-full bg-[#D4AF37] px-5 py-3 text-black transition hover:scale-105"
         >
           Submit Inquiry
