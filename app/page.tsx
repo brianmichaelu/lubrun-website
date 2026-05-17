@@ -29,7 +29,7 @@ export default function Home() {
   },
 ];
   return (
-    <main className="bg-white text-gray-900">
+    <main className="scroll-smooth bg-white text-gray-900">
       {/* HEADER */}
 <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071421]/95 backdrop-blur">
   <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -53,7 +53,7 @@ export default function Home() {
 
     {/* NAVIGATION */}
     <nav className="hidden items-center gap-8 text-sm font-semibold text-white lg:flex">
-      <a href="#" className="hover:text-[#D4AF37]">
+      <a href="#" className="transition hover:text-[#D4AF37]">
         Home
       </a>
 
