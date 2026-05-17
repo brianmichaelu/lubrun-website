@@ -80,7 +80,9 @@ export default function Home() {
         WhatsApp
       </a>
     </nav>
-
+     <button className="rounded-xl border border-white/20 p-3 text-white lg:hidden">
+      ☰
+     </button>
   </div>
 </header>
 
