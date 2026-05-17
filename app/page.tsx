@@ -277,7 +277,7 @@ export default function Home() {
               <div
                 key={service.title}
                className="rounded-[2rem] bg-white p-10 shadow-xl transition hover:-translate-y-3 hover:shadow-2xl"
-                >
+                
     
                 <div className="text-5xl">
                 {service.icon}
