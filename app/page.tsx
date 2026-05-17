@@ -321,42 +321,64 @@ export default function Home() {
 
     <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-      <div className="rounded-[2rem] bg-[#0A2540] p-10 text-white shadow-xl">
-        <h3 className="text-2xl font-black text-[#D4AF37]">
-          Corporate Uniforms
-        </h3>
+  {/* ITEM 1 */}
+  <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl">
 
-        <p className="mt-5 leading-7 text-gray-300">
-          Premium uniforms designed for professional
-          presentation and brand consistency.
-        </p>
-      </div>
+    <div className="h-64 bg-[#0A2540]"></div>
 
-      <div className="rounded-[2rem] bg-gray-100 p-10 shadow-xl">
-        <h3 className="text-2xl font-black text-[#0A2540]">
-          Promotional Products
-        </h3>
+    <div className="p-8">
 
-        <p className="mt-5 leading-7 text-gray-600">
-          Branded merchandise including mugs, caps,
-          flyers, banners, and event materials.
-        </p>
-      </div>
+      <h3 className="text-2xl font-black text-[#0A2540]">
+        Corporate Uniforms
+      </h3>
 
-      <div className="rounded-[2rem] bg-[#D4AF37] p-10 text-black shadow-xl">
-        <h3 className="text-2xl font-black">
-          Bulk Printing Services
-        </h3>
-
-        <p className="mt-5 leading-7">
-          Reliable large-scale printing solutions
-          for institutions and organizations.
-        </p>
-      </div>
+      <p className="mt-4 leading-7 text-gray-600">
+        Premium branded uniforms designed for professional businesses and institutions.
+      </p>
 
     </div>
 
   </div>
+
+  {/* ITEM 2 */}
+  <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl">
+
+    <div className="h-64 bg-[#D4AF37]"></div>
+
+    <div className="p-8">
+
+      <h3 className="text-2xl font-black text-[#0A2540]">
+        Promotional Branding
+      </h3>
+
+      <p className="mt-4 leading-7 text-gray-600">
+        Branded promotional products including mugs, banners, and merchandise.
+      </p>
+
+    </div>
+
+  </div>
+
+  {/* ITEM 3 */}
+  <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl">
+
+    <div className="h-64 bg-gray-300"></div>
+
+    <div className="p-8">
+
+      <h3 className="text-2xl font-black text-[#0A2540]">
+        Bulk Printing
+      </h3>
+
+      <p className="mt-4 leading-7 text-gray-600">
+        Large-scale printing solutions tailored for organizations and corporate clients.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
 </section>
 
       {/* CTA */}
