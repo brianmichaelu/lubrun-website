@@ -57,15 +57,15 @@ export default function Home() {
         Home
       </a>
 
-      <a href="#services" className="hover:text-[#D4AF37]">
+      <a href="#services" className="transition hover:text-[#D4AF37]">
         Services
       </a>
 
-      <a href="#about" className="hover:text-[#D4AF37]">
+      <a href="#about"className="transition hover:text-[#D4AF37]">
         About
       </a>
 
-      <a href="#contact" className="hover:text-[#D4AF37]">
+      <a href="#contact" className="transition hover:text-[#D4AF37]">
         Contact
       </a>
 
