@@ -427,6 +427,102 @@ export default function Home() {
   </div>
 </section>
 
+     {/* WHY CHOOSE US */}
+<section className="bg-[#071421] py-24 text-white">
+
+  <div className="mx-auto max-w-7xl px-6">
+
+    <div className="max-w-3xl">
+
+      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+        Why Choose Us
+      </p>
+
+      <h2 className="mt-5 text-5xl font-black leading-tight">
+        Trusted Branding &
+        Printing Partner
+      </h2>
+
+      <p className="mt-8 text-lg leading-8 text-gray-300">
+        We combine premium quality, reliable turnaround,
+        and professional service to help businesses,
+        institutions, and organizations strengthen their brand identity.
+      </p>
+
+    </div>
+
+    <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+
+      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur">
+
+        <div className="text-5xl">
+          ⚡
+        </div>
+
+        <h3 className="mt-8 text-2xl font-black text-[#D4AF37]">
+          Fast Delivery
+        </h3>
+
+        <p className="mt-5 leading-7 text-gray-300">
+          Reliable project turnaround for urgent and large-scale orders.
+        </p>
+
+      </div>
+
+      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur">
+
+        <div className="text-5xl">
+          🏆
+        </div>
+
+        <h3 className="mt-8 text-2xl font-black text-[#D4AF37]">
+          Premium Quality
+        </h3>
+
+        <p className="mt-5 leading-7 text-gray-300">
+          High-standard printing and branding solutions tailored for professionals.
+        </p>
+
+      </div>
+
+      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur">
+
+        <div className="text-5xl">
+          🤝
+        </div>
+
+        <h3 className="mt-8 text-2xl font-black text-[#D4AF37]">
+          Corporate Focus
+        </h3>
+
+        <p className="mt-5 leading-7 text-gray-300">
+          Specialized solutions for institutions, NGOs, schools, and companies.
+        </p>
+
+      </div>
+
+      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur">
+
+        <div className="text-5xl">
+          🎯
+        </div>
+
+        <h3 className="mt-8 text-2xl font-black text-[#D4AF37]">
+          Brand Excellence
+        </h3>
+
+        <p className="mt-5 leading-7 text-gray-300">
+          Helping businesses create strong, professional, and memorable branding.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
       {/* CTA */}
 
       {/* CONTACT */}
