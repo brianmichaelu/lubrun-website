@@ -1,23 +1,33 @@
 export default function Home() {
-  const services = [
-    {
-      title: "Corporate Uniforms",
-      desc: "Professional uniforms for schools, hotels, NGOs, security companies, and institutions.",
-    },
-    {
-      title: "T-Shirt Printing",
-      desc: "Custom branded t-shirts for campaigns, events, teams, staff, and promotions.",
-    },
-    {
-      title: "Promotional Materials",
-      desc: "Branded mugs, caps, banners, flyers, stickers, and marketing merchandise.",
-    },
-    {
-      title: "Bulk Printing",
-      desc: "Reliable high-volume printing services with quality control and fast turnaround.",
-    },
-  ];
+ const services = [
+  {
+    title: "T-Shirt Printing",
+    description:
+      "High-quality branded t-shirts for businesses, events, schools, and organizations.",
+    icon: "👕",
+  },
 
+  {
+    title: "Corporate Uniforms",
+    description:
+      "Professional uniforms designed for strong brand identity and workplace presentation.",
+    icon: "🏢",
+  },
+
+  {
+    title: "Promotional Products",
+    description:
+      "Branded merchandise including mugs, banners, caps, flyers, and giveaways.",
+    icon: "🎁",
+  },
+
+  {
+    title: "Bulk Printing",
+    description:
+      "Large-scale printing services tailored for institutions and corporate clients.",
+    icon: "🖨️",
+  },
+];
   return (
     <main className="bg-white text-gray-900">
       {/* HEADER */}
@@ -266,8 +276,13 @@ export default function Home() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:shadow-2xl"
-              >
+               className="rounded-[2rem] bg-white p-10 shadow-xl transition hover:-translate-y-3 hover:shadow-2xl"
+                >
+    
+                <div className="text-5xl">
+                {service.icon}
+                </div>
+                
                 <h3 className="text-2xl font-black text-[#0A2540]">
                   {service.title}
                 </h3>
