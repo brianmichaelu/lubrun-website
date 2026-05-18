@@ -84,9 +84,40 @@ export default function Home() {
         WhatsApp
       </a>
     </nav>
-     <button className="rounded-xl border border-white/20 p-3 text-white lg:hidden">
-      ☰
-     </button>
+     <details className="relative lg:hidden">
+  <summary className="cursor-pointer list-none rounded-xl border border-white/20 p-3 text-white">
+    ☰
+  </summary>
+
+  <div className="absolute right-0 mt-4 w-56 rounded-2xl bg-[#071421] p-5 text-white shadow-2xl">
+    <a href="#" className="block py-3 hover:text-[#D4AF37]">
+      Home
+    </a>
+
+    <a href="#about" className="block py-3 hover:text-[#D4AF37]">
+      About
+    </a>
+
+    <a href="#services" className="block py-3 hover:text-[#D4AF37]">
+      Services
+    </a>
+
+    <a href="#portfolio" className="block py-3 hover:text-[#D4AF37]">
+      Portfolio
+    </a>
+
+    <a href="#contact" className="block py-3 hover:text-[#D4AF37]">
+      Contact
+    </a>
+
+    <a
+      href="https://wa.me/255689824682"
+      className="mt-4 block rounded-xl bg-[#D4AF37] px-4 py-3 text-center font-bold text-black"
+    >
+      WhatsApp
+    </a>
+  </div>
+</details>
   </div>
 </header>
 
