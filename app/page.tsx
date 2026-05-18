@@ -448,7 +448,11 @@ export default function Home() {
   {/* ITEM 1 */}
   <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl">
 
-    <div className="h-64 bg-[#0A2540]"></div>
+    <img
+  src="/tshirts.png"
+  alt="T-Shirt Printing"
+  className="h-64 w-full object-cover"
+  />
 
     <div className="p-8">
 
@@ -467,7 +471,11 @@ export default function Home() {
   {/* ITEM 2 */}
   <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl">
 
-    <div className="h-64 bg-[#D4AF37]"></div>
+    <img
+  src="/cooperate uniforms.png"
+  alt="Corporate Uniforms"
+  className="h-64 w-full object-cover"
+/>
 
     <div className="p-8">
 
@@ -486,7 +494,11 @@ export default function Home() {
   {/* ITEM 3 */}
   <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl">
 
-    <div className="h-64 bg-gray-300"></div>
+    <img
+  src="/promotional items.png"
+  alt="Promotional Branding"
+  className="h-64 w-full object-cover"
+/>
 
     <div className="p-8">
 
