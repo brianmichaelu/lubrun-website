@@ -472,7 +472,7 @@ export default function Home() {
   <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl">
 
     <img
-  src="/uniform.png"
+  src="/uniforms.png"
   alt="Corporate Uniforms"
   className="h-64 w-full object-cover"
 />
