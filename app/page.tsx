@@ -57,7 +57,7 @@ export default function Home() {
 
     {/* NAVIGATION */}
     <nav className="hidden items-center gap-8 text-sm font-semibold text-white lg:flex">
-      <a href="#" className="transition hover:text-[#D4AF37]">
+      <a href="#home" className="transition hover:text-[#D4AF37]">
         Home
       </a>
 
@@ -353,7 +353,7 @@ export default function Home() {
       </section>
 
       {/* PORTFOLIO */}
-<section className="bg-white py-24">
+<section id="portfolio" className="bg-white py-24">
   <div className="mx-auto max-w-7xl px-6">
 
     <div className="max-w-3xl">
