@@ -578,8 +578,25 @@ export default function Home() {
 
     <div className="rounded-[2rem] bg-white p-10 text-black shadow-2xl">
 
-      <form className="space-y-6">
+      <form
+  action="https://formsubmit.co/lubrun.enterprises@gmail.com"
+  method="POST"
+  className="mt-12 space-y-6 rounded-[2rem] bg-white p-10 text-black shadow-2xl"
+>
 
+       <input type="hidden" name="_captcha" value="false" />
+
+<input
+  type="hidden"
+  name="_subject"
+  value="New Lub Run Website Inquiry"
+/>
+
+<input
+  type="hidden"
+  name="_next"
+  value="https://lubrun-website-ozvi.vercel.app/"
+/>
         <input
           type="text"
           placeholder="Full Name"
