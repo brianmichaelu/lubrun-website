@@ -92,8 +92,12 @@ export default function Home() {
 
       {/* HERO */}
       <section className="min-h-screen bg-gradient-to-br from-[#071421] via-[#0A2540] to-[#102F4E] text-white">
-        <div className="mx-auto max-w-7xl px-6 py-28">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-32">
 
+        <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-[#D4AF37]/20 blur-3xl"></div>
+
+        <div className="absolute right-0 top-0 h-[30rem] w-[30rem] rounded-full bg-blue-500/10 blur-3xl"></div>
+         
           <div className="max-w-4xl">
             <span className="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm">
               Trusted Corporate Branding Partner
