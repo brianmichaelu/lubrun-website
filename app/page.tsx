@@ -1,7 +1,7 @@
 export default function Home() {
  const services = [
   {
-    title: "T-Shirt Printing",f
+    title: "T-Shirt Printing",
     description:
       "High-quality branded t-shirts for businesses, events, schools, and organizations.",
     icon: "👕",
