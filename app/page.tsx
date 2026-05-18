@@ -1,7 +1,7 @@
 export default function Home() {
  const services = [
   {
-    title: "T-Shirt Printing",
+    title: "T-Shirt Printing",f
     description:
       "High-quality branded t-shirts for businesses, events, schools, and organizations.",
     icon: "👕",
@@ -451,7 +451,7 @@ export default function Home() {
     <img
   src="/tshirts.png"
   alt="T-Shirt Printing"
-  className="h-64 w-full object-cover"
+  className="h-56 w-full object-cover sm:h-64"
   />
 
     <div className="p-8">
@@ -474,8 +474,8 @@ export default function Home() {
     <img
   src="/uniforms.png"
   alt="Corporate Uniforms"
-  className="h-64 w-full object-cover"
-/>
+  className="h-56 w-full object-cover sm:h-64"
+    />
 
     <div className="p-8">
 
@@ -497,7 +497,7 @@ export default function Home() {
     <img
   src="/branding.png"
   alt="Promotional Branding"
-  className="h-64 w-full object-cover"
+  className="h-56 w-full object-cover sm:h-64"
 />
 
     <div className="p-8">
