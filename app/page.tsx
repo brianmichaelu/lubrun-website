@@ -35,11 +35,11 @@ export default function Home() {
   <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
     {/* LOGO */}
-    <div className="flex items-center gap-3">
-      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D4AF37] text-xl font-black text-black">
-        LR
-      </div>
-
+    <img
+  src="/logo.png"
+  alt="Lub Run Enterprises"
+  className="h-14 w-auto"
+/>
       <div>
         <h1 className="text-lg font-black text-white">
           LUB RUN ENTERPRISES
