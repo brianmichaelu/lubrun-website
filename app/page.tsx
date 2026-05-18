@@ -595,7 +595,7 @@ export default function Home() {
 <input
   type="hidden"
   name="_next"
-  value="https://lubrun-website-ozvi.vercel.app/"
+  value="https://lubrun-website-ozvi.vercel.app"
 />
         <input
           type="text"
