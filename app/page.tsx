@@ -495,7 +495,7 @@ export default function Home() {
   <div className="overflow-hidden rounded-[2rem] bg-white shadow-xl">
 
     <img
-  src="/branding.png"
+  src="/bulk.png"
   alt="Promotional Branding"
   className="h-56 w-full object-cover sm:h-64"
 />
