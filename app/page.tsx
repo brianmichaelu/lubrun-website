@@ -592,11 +592,7 @@ export default function Home() {
   value="New Lub Run Website Inquiry"
 />
 
-<input
-  type="hidden"
-  name="_next"
-  value="https://lubrun-website-ozvi.vercel.app"
-/>
+
         <input
           type="text"
           placeholder="Full Name"
