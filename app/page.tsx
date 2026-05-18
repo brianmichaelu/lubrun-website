@@ -341,6 +341,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* BILINGUAL INTRO */}
+<section className="bg-white py-20">
+  <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-2">
+    
+    <div className="rounded-[2rem] border border-gray-200 p-10 shadow-sm">
+      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+        English
+      </p>
+
+      <h2 className="mt-5 text-3xl font-black text-[#0A2540]">
+        Corporate Printing & Branding Solutions
+      </h2>
+
+      <p className="mt-5 leading-8 text-gray-600">
+        We provide professional uniforms, t-shirt printing,
+        promotional products, and branding services for businesses,
+        schools, NGOs, hotels, and institutions.
+      </p>
+    </div>
+
+    <div className="rounded-[2rem] bg-[#0A2540] p-10 text-white shadow-xl">
+      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+        Kiswahili
+      </p>
+
+      <h2 className="mt-5 text-3xl font-black">
+        Huduma za Uchapishaji na Branding
+      </h2>
+
+      <p className="mt-5 leading-8 text-gray-300">
+        Tunatoa huduma za sare, uchapishaji wa t-shirt,
+        vifaa vya matangazo, na branding kwa makampuni,
+        shule, NGO, hoteli, na taasisi mbalimbali.
+      </p>
+    </div>
+
+  </div>
+</section>
+     
+
       {/* SERVICES */}
      <section id="services" className="bg-gray-100 py-24">
         <div className="mx-auto max-w-7xl px-6">
