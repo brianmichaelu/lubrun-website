@@ -35,21 +35,25 @@ export default function Home() {
   <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
     {/* LOGO */}
-    <img
-  src="/logo.png"
-  alt="Lub Run Enterprises"
-  className="h-14 w-auto"
-/>
-      <div>
-        <h1 className="text-lg font-black text-white">
-          LUB RUN ENTERPRISES
-        </h1>
+    <div className="flex items-center gap-3">
 
-        <p className="text-xs text-gray-400">
-          Bring Your Brand Life
-        </p>
-      </div>
-    </div>
+  <img
+    src="/logo.png"
+    alt="Lub Run Enterprises"
+    className="h-14 w-auto"
+  />
+
+  <div>
+    <h1 className="text-lg font-black tracking-wide text-white">
+      LUB RUN
+    </h1>
+
+    <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
+      ENTERPRISES
+    </p>
+  </div>
+
+</div>
 
     {/* NAVIGATION */}
     <nav className="hidden items-center gap-8 text-sm font-semibold text-white lg:flex">
