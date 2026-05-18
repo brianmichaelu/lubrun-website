@@ -10,7 +10,7 @@ export default function Home() {
   {
     title: "Corporate Uniforms",
     description:
-      "Professional uniforms designed for strong brand identity and workplace presentation.",
+      "Professional unis designed for strong brand identity and workplace presentation.",
     icon: "🏢",
   },
 
@@ -595,12 +595,14 @@ export default function Home() {
 
         <input
           type="text"
+          name="name"
           placeholder="Full Name"
           className="w-full rounded-2xl border border-gray-200 px-5 py-4"
         />
 
         <input
           type="email"
+          name="email"
           placeholder="Email Address"
           className="w-full rounded-2xl border border-gray-200 px-5 py-4"
         />
@@ -612,6 +614,7 @@ export default function Home() {
         />
 
         <textarea
+          name="message"
           rows={5}
           placeholder="Tell us about your project..."
           className="w-full rounded-2xl border border-gray-200 px-5 py-4"
