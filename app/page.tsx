@@ -10,7 +10,7 @@ export default function Home() {
   {
     title: "Corporate Uniforms",
     description:
-      "Professional unis designed for strong brand identity and workplace presentation.",
+      "Professional uniforms designed for strong brand identity.",
     icon: "🏢",
   },
 
