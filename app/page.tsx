@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 export default function Home() {
   const phoneNumber = "255689824682";
@@ -20,6 +20,33 @@ export default function Home() {
     message: "",
   });
 
+    useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+
+      if (!hash) return;
+
+      const section = document.querySelector(hash);
+
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 120);
+      }
+    };
+
+    scrollToHash();
+
+    window.addEventListener("hashchange", scrollToHash);
+
+    return () => {
+      window.removeEventListener("hashchange", scrollToHash);
+    };
+  }, []);
+  
   const quickQuoteMessage = encodeURIComponent(
     "Hello Lub Run Enterprises, I would like to request a custom quote."
   );
