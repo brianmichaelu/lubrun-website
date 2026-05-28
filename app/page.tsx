@@ -132,6 +132,23 @@ export default function Home() {
 
   const closeMobileMenu = () => setIsMenuOpen(false);
 
+  const scrollToSection = (sectionId: string) => {
+  const section = document.getElementById(sectionId);
+
+  if (!section) return;
+
+  closeMobileMenu();
+
+  const headerOffset = 96;
+  const sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+  const offsetPosition = sectionPosition - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
+  });
+};
+
   const handleQuoteSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -165,7 +182,7 @@ Extra Details: ${quoteForm.message}`
       {/* HEADER */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071421]/95 shadow-lg backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-          <a href="/" className="flex items-center gap-3" onClick={closeMobileMenu}>
+          <a href="/" className="flex items-center gap-3" onClick={}>
             <Image
               src="/logo.png"
               alt="Lub Run Enterprises logo"
@@ -190,21 +207,45 @@ Extra Details: ${quoteForm.message}`
     Home
   </a>
 
-  <a href="#services" className="transition hover:text-[#D4AF37]">
-    Services
-  </a>
+  <button
+  type="button"
+  onClick={() => scrollToSection("services")}
+  className="transition hover:text-[#D4AF37]"
+>
+  Services
+</button>
 
-  <a href="#portfolio" className="transition hover:text-[#D4AF37]">
-    Samples
-  </a>
+<button
+  type="button"
+  onClick={() => scrollToSection("portfolio")}
+  className="transition hover:text-[#D4AF37]"
+>
+  Samples
+</button>
 
-  <a href="#about" className="transition hover:text-[#D4AF37]">
-    About
-  </a>
+<button
+  type="button"
+  onClick={() => scrollToSection("about")}
+  className="transition hover:text-[#D4AF37]"
+>
+  About
+</button>
 
-  <a href="#contact" className="transition hover:text-[#D4AF37]">
-    Contact
-  </a>
+<button
+  type="button"
+  onClick={() => scrollToSection("contact")}
+  className="transition hover:text-[#D4AF37]"
+>
+  Contact
+</button>
+
+  <button
+  type="button"
+  onClick={() => scrollToSection("contact")}
+  className="transition hover:text-[#D4AF37]"
+>
+  Contact
+</button>
 
   <a
     href={`${whatsappBase}?text=${quickQuoteMessage}`}
@@ -231,41 +272,46 @@ Extra Details: ${quoteForm.message}`
         {isMenuOpen && (
           <div className="border-t border-white/10 bg-[#071421] px-6 py-5 text-white lg:hidden">
             <nav className="mx-auto grid max-w-7xl gap-2">
-              <a
-                  href="/"
-                  onClick={closeMobileMenu}
-                  className="rounded-xl px-4 py-3 hover:bg-white/10"
+              
+              <button
+                  type="button"
+                  onClick={() => scrollToSection("home")}
+                  className="rounded-xl px-4 py-3 text-left hover:bg-white/10"
               >
-                  Home
-            </a>
-              <a
-                href="#services"
-                onClick={closeMobileMenu}
-                className="rounded-xl px-4 py-3 hover:bg-white/10"
+                   home
+              </button>
+              
+              <button
+                  type="button"
+                  onClick={() => scrollToSection("services")}
+                  className="rounded-xl px-4 py-3 text-left hover:bg-white/10"
               >
-                Services
-              </a>
-              <a
-                href="#portfolio"
-                onClick={closeMobileMenu}
-                className="rounded-xl px-4 py-3 hover:bg-white/10"
+                 services
+              </button>
+              
+              <button
+                  type="button"
+                  onClick={() => scrollToSection("samples")}
+                  className="rounded-xl px-4 py-3 text-left hover:bg-white/10"
               >
-                Samples
-              </a>
-              <a
-                href="#about"
-                onClick={closeMobileMenu}
-                className="rounded-xl px-4 py-3 hover:bg-white/10"
+                  samples
+              </button>
+              
+              <button
+                    type="button"
+                    onClick={() => scrollToSection("about")}
+                    className="rounded-xl px-4 py-3 text-left hover:bg-white/10"
               >
-                About
-              </a>
-              <a
-                href="#contact"
-                onClick={closeMobileMenu}
-                className="rounded-xl px-4 py-3 hover:bg-white/10"
+                    about
+              </button>
+                
+              <button
+                  type="button"
+                  onClick={() => scrollToSection("contact")}
+                  className="rounded-xl px-4 py-3 text-left hover:bg-white/10"
               >
-                Contact
-              </a>
+                  Contact
+              </button>
 
               <a
                 href={`${whatsappBase}?text=${quickQuoteMessage}`}
