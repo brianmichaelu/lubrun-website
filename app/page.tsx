@@ -138,7 +138,7 @@ Extra Details: ${quoteForm.message}`
       {/* HEADER */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071421]/95 shadow-lg backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-          <a href="#home" className="flex items-center gap-3" onClick={closeMobileMenu}>
+          <a href="/" className="flex items-center gap-3" onClick={closeMobileMenu}>
             <Image
               src="/logo.png"
               alt="Lub Run Enterprises logo"
@@ -158,7 +158,7 @@ Extra Details: ${quoteForm.message}`
 
           {/* DESKTOP NAVIGATION */}
           <nav className="hidden items-center gap-8 text-sm font-semibold text-white lg:flex">
-            <a href="#home" className="transition hover:text-[#D4AF37]">
+            <a href="/" className="transition hover:text-[#D4AF37]">   Home </a>
               Home
             </a>
             <a href="#services" className="transition hover:text-[#D4AF37]">
@@ -200,12 +200,12 @@ Extra Details: ${quoteForm.message}`
           <div className="border-t border-white/10 bg-[#071421] px-6 py-5 text-white lg:hidden">
             <nav className="mx-auto grid max-w-7xl gap-2">
               <a
-                href="#home"
-                onClick={closeMobileMenu}
-                className="rounded-xl px-4 py-3 hover:bg-white/10"
+                  href="/"
+                  onClick={closeMobileMenu}
+                  className="rounded-xl px-4 py-3 hover:bg-white/10"
               >
-                Home
-              </a>
+                  Home
+            </a>
               <a
                 href="#services"
                 onClick={closeMobileMenu}
@@ -250,19 +250,19 @@ Extra Details: ${quoteForm.message}`
 
       {/* HERO */}
       <section
-        id="home"
-        className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#071421] via-[#0A2540] to-[#102F4E] text-white"
+            id="home"
+            className="relative min-h-[calc(100vh-88px)] overflow-hidden bg-gradient-to-br from-[#071421] via-[#0A2540] to-[#102F4E] text-white"
       >
         <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-[#D4AF37]/20 blur-3xl" />
         <div className="absolute right-0 top-0 h-[30rem] w-[30rem] rounded-full bg-blue-500/10 blur-3xl" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-28 md:py-32">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="max-w-4xl">
             <span className="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm">
               Printing • Branding • Uniforms • Promotional Products
             </span>
 
-            <h1 className="mt-8 max-w-5xl text-4xl font-black leading-tight tracking-tight text-white md:text-6xl">
+            <h1 className="mt-8 max-w-5xl text-4xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
               Premium Printing, Branding & Corporate Identity Solutions
             </h1>
 
