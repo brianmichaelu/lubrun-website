@@ -239,14 +239,6 @@ Extra Details: ${quoteForm.message}`
   Contact
 </button>
 
-  <button
-  type="button"
-  onClick={() => scrollToSection("contact")}
-  className="transition hover:text-[#D4AF37]"
->
-  Contact
-</button>
-
   <a
     href={`${whatsappBase}?text=${quickQuoteMessage}`}
     target="_blank"
