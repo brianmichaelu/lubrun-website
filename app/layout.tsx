@@ -12,21 +12,49 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Lub Run Enterprises | Premium Printing & Branding Solutions",
-
+export const metadata: Metadata = {
+  title: {
+    default: "Lub Run Enterprises | Printing, Branding & Corporate Uniforms",
+    template: "%s | Lub Run Enterprises",
+  },
   description:
-    "Lub Run Enterprises provides premium printing, branding, corporate uniforms, promotional products, and bulk printing services in Tanzania.",
-
+    "Lub Run Enterprises provides professional printing, branding, corporate uniforms, promotional products, banners, signage, and bulk printing services in Dar es Salaam, Tanzania.",
   keywords: [
-    "printing Tanzania",
-    "branding company Tanzania",
-    "corporate uniforms",
-    "t-shirt printing",
-    "bulk printing",
-    "promotional products",
     "Lub Run Enterprises",
+    "printing Tanzania",
+    "printing Dar es Salaam",
+    "branding company Tanzania",
+    "corporate uniforms Tanzania",
+    "t-shirt printing Tanzania",
+    "bulk printing Tanzania",
+    "promotional products Tanzania",
+    "banner printing Tanzania",
+    "signage Tanzania",
   ],
+  authors: [{ name: "Lub Run Enterprises" }],
+  creator: "Lub Run Enterprises",
+  publisher: "Lub Run Enterprises",
+  metadataBase: new URL("https://lubrun-website-ozvi.vercel.app"),
+  openGraph: {
+    title: "Lub Run Enterprises | Printing, Branding & Corporate Uniforms",
+    description:
+      "Professional printing, branding, corporate uniforms, promotional products, banners, signage, and bulk printing services in Dar es Salaam, Tanzania.",
+    url: "https://lubrun-website-ozvi.vercel.app",
+    siteName: "Lub Run Enterprises",
+    locale: "en_TZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lub Run Enterprises | Printing, Branding & Corporate Uniforms",
+    description:
+      "Professional printing, branding, corporate uniforms, promotional products, banners, signage, and bulk printing services in Tanzania.",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -37,9 +65,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full bg-white text-gray-900">{children}</body>
     </html>
   );
 }
