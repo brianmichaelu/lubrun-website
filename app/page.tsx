@@ -1,12 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export default function Home() {
   const phoneNumber = "255689824682";
   const email = "lubrun.enterprises@gmail.com";
   const whatsappBase = `https://wa.me/${phoneNumber}`;
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [quoteForm, setQuoteForm] = useState({
     name: "",
@@ -18,60 +20,105 @@ export default function Home() {
     message: "",
   });
 
+  const quickQuoteMessage = encodeURIComponent(
+    "Hello Lub Run Enterprises, I would like to request a custom quote."
+  );
+
   const services = [
     {
       title: "T-Shirt Printing",
       description:
-        "High-quality branded t-shirts for businesses, events, schools, and organizations.",
+        "High-quality branded t-shirts for businesses, schools, events, campaigns, and organizations.",
       icon: "👕",
     },
     {
       title: "Corporate Uniforms",
-      description: "Professional uniforms designed for strong brand identity.",
+      description:
+        "Professional branded uniforms for staff, hospitality teams, institutions, and corporate teams.",
       icon: "🏢",
     },
     {
       title: "Promotional Products",
       description:
-        "Branded merchandise including mugs, banners, caps, flyers, and giveaways.",
+        "Branded mugs, caps, bags, flyers, banners, giveaways, and marketing materials.",
       icon: "🎁",
     },
     {
       title: "Bulk Printing",
       description:
-        "Large-scale printing services tailored for institutions and corporate clients.",
+        "Reliable large-scale printing solutions for companies, schools, NGOs, and institutions.",
       icon: "🖨️",
     },
   ];
 
   const portfolioItems = [
     {
-      title: "Corporate Uniforms",
+      title: "Corporate Uniform Samples",
       description:
-        "Premium branded uniforms designed for professional businesses and institutions.",
+        "Sample visuals showing professional branded uniforms for companies, hotels, schools, and institutions.",
       image: "/uniforms.png",
       alt: "Corporate uniforms branding sample",
     },
     {
-      title: "Promotional Branding",
+      title: "Promotional Branding Samples",
       description:
-        "Branded promotional products including mugs, banners, and merchandise.",
+        "Sample visuals showing branded promotional items such as mugs, caps, banners, and merchandise.",
       image: "/branding.png",
       alt: "Promotional branding products sample",
     },
     {
-      title: "Bulk Printing",
+      title: "Bulk Printing Samples",
       description:
-        "Large-scale printing solutions tailored for organizations and corporate clients.",
+        "Sample visuals showing bulk printing solutions for organizations, corporate clients, and campaigns.",
       image: "/bulk.png",
       alt: "Bulk printing project sample",
     },
   ];
 
-  const handleQuoteSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const orderOptions = [
+    "Branded T-Shirts",
+    "Corporate Uniforms",
+    "Caps & Hats",
+    "Mugs & Gifts",
+    "Banners & Signage",
+    "Flyers & Posters",
+    "Business Cards",
+    "Event Merchandise",
+    "School Uniform Branding",
+    "NGO & Campaign Materials",
+    "Hotel & Restaurant Uniforms",
+    "Corporate Gift Packages",
+  ];
+
+  const suitableFor = [
+    "Companies",
+    "Schools",
+    "NGOs",
+    "Hotels",
+    "Restaurants",
+    "Events",
+    "Churches & Institutions",
+    "Small Businesses",
+    "Corporate Teams",
+    "Marketing Campaigns",
+  ];
+
+  const closeMobileMenu = () => setIsMenuOpen(false);
+
+  const handleQuoteSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const message = `Hello Lub Run Enterprises, I would like to request a quotation.%0A%0AName: ${quoteForm.name}%0APhone: ${quoteForm.phone}%0AEmail: ${quoteForm.email}%0AService Needed: ${quoteForm.service}%0AQuantity: ${quoteForm.quantity}%0ADeadline: ${quoteForm.deadline}%0AMessage: ${quoteForm.message}`;
+    const message = encodeURIComponent(
+      `Hello Lub Run Enterprises, I would like to request a quotation.
+
+Name: ${quoteForm.name}
+Phone: ${quoteForm.phone}
+Email: ${quoteForm.email}
+Service Needed: ${quoteForm.service}
+Quantity: ${quoteForm.quantity}
+Deadline: ${quoteForm.deadline}
+Extra Details: ${quoteForm.message}`
+    );
 
     window.open(`${whatsappBase}?text=${message}`, "_blank");
 
@@ -91,8 +138,7 @@ export default function Home() {
       {/* HEADER */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071421]/95 shadow-lg backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          {/* LOGO */}
-          <a href="#home" className="flex items-center gap-3">
+          <a href="#home" className="flex items-center gap-3" onClick={closeMobileMenu}>
             <Image
               src="/logo.png"
               alt="Lub Run Enterprises logo"
@@ -119,7 +165,7 @@ export default function Home() {
               Services
             </a>
             <a href="#portfolio" className="transition hover:text-[#D4AF37]">
-              Portfolio
+              Samples
             </a>
             <a href="#about" className="transition hover:text-[#D4AF37]">
               About
@@ -129,7 +175,7 @@ export default function Home() {
             </a>
 
             <a
-              href={`${whatsappBase}?text=Hello%20Lub%20Run%20Enterprises%2C%20I%20would%20like%20to%20request%20a%20quote.`}
+              href={`${whatsappBase}?text=${quickQuoteMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full bg-[#D4AF37] px-5 py-3 font-bold text-black transition hover:scale-105 hover:bg-[#c7a12c]"
@@ -138,40 +184,48 @@ export default function Home() {
             </a>
           </nav>
 
-          {/* MOBILE MENU */}
-          <details className="relative lg:hidden">
-            <summary className="cursor-pointer list-none rounded-xl border border-white/20 p-3 text-white">
-              ☰
-            </summary>
+          {/* MOBILE MENU BUTTON */}
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/20 text-2xl text-white lg:hidden"
+            aria-label="Toggle mobile menu"
+          >
+            {isMenuOpen ? "×" : "☰"}
+          </button>
+        </div>
 
-            <div className="absolute right-0 mt-4 w-60 rounded-2xl bg-[#071421] p-5 text-white shadow-2xl">
-              <a href="#home" className="block py-3 hover:text-[#D4AF37]">
+        {/* MOBILE NAVIGATION */}
+        {isMenuOpen && (
+          <div className="border-t border-white/10 bg-[#071421] px-6 py-5 text-white lg:hidden">
+            <nav className="mx-auto grid max-w-7xl gap-2">
+              <a href="#home" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
                 Home
               </a>
-              <a href="#services" className="block py-3 hover:text-[#D4AF37]">
+              <a href="#services" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
                 Services
               </a>
-              <a href="#portfolio" className="block py-3 hover:text-[#D4AF37]">
-                Portfolio
+              <a href="#portfolio" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
+                Samples
               </a>
-              <a href="#about" className="block py-3 hover:text-[#D4AF37]">
+              <a href="#about" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
                 About
               </a>
-              <a href="#contact" className="block py-3 hover:text-[#D4AF37]">
+              <a href="#contact" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
                 Contact
               </a>
 
               <a
-                href={`${whatsappBase}?text=Hello%20Lub%20Run%20Enterprises%2C%20I%20would%20like%20to%20request%20a%20quote.`}
+                href={`${whatsappBase}?text=${quickQuoteMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 block rounded-xl bg-[#D4AF37] px-4 py-3 text-center font-bold text-black"
+                className="mt-3 rounded-xl bg-[#D4AF37] px-4 py-3 text-center font-bold text-black"
               >
                 Request Quote
               </a>
-            </div>
-          </details>
-        </div>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* HERO */}
@@ -185,7 +239,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-28 md:py-32">
           <div className="max-w-4xl">
             <span className="rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm">
-              Trusted Corporate Branding Partner
+              Printing • Branding • Uniforms • Promotional Products
             </span>
 
             <h1 className="mt-8 max-w-5xl text-5xl font-black leading-tight tracking-tight text-white md:text-7xl">
@@ -193,10 +247,10 @@ export default function Home() {
             </h1>
 
             <p className="mt-8 max-w-3xl text-lg leading-9 text-gray-300 md:text-xl">
-              Lub Run Enterprises delivers high-quality t-shirt printing,
-              uniforms, promotional products, branding solutions, and large-scale
-              corporate printing services tailored for businesses, institutions,
-              and organizations.
+              Lub Run Enterprises helps businesses, schools, NGOs, hotels, events,
+              and organizations create professional branded products including
+              t-shirts, uniforms, promotional items, banners, and bulk printing
+              solutions.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4 text-sm font-semibold text-white">
@@ -211,19 +265,19 @@ export default function Home() {
 
             <div className="mt-10 flex flex-wrap gap-5">
               <a
-                href={`${whatsappBase}?text=Hello%20Lub%20Run%20Enterprises%2C%20I%20would%20like%20to%20request%20a%20quote.`}
+                href={`${whatsappBase}?text=${quickQuoteMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-2xl bg-[#D4AF37] px-8 py-4 font-bold text-black shadow-xl transition hover:scale-105"
               >
-                Request a Quote
+                Request a Custom Quote
               </a>
 
               <a
-                href={`mailto:${email}`}
+                href="#services"
                 className="rounded-2xl border border-white/20 px-8 py-4 font-bold transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
               >
-                Email Us
+                View Services
               </a>
             </div>
           </div>
@@ -231,7 +285,7 @@ export default function Home() {
           <div className="mt-20 grid gap-8 md:grid-cols-4">
             {[
               ["Bulk", "Orders & Production"],
-              ["Fast", "Turnaround Time"],
+              ["Fast", "Turnaround Support"],
               ["Trusted", "Corporate Service"],
               ["Dar", "Serving Tanzania"],
             ].map(([title, text]) => (
@@ -258,13 +312,14 @@ export default function Home() {
               Professional Branding Built For Modern Businesses
             </h2>
             <p className="mt-8 text-lg leading-8 text-gray-600">
-              Lub Run Enterprises specializes in professional printing, uniforms,
-              promotional materials, and branding solutions designed for organizations
-              that value quality, professionalism, and reliability.
+              Lub Run Enterprises provides printing, uniforms, promotional products,
+              and branding solutions for organizations that value quality,
+              professionalism, and reliable communication.
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              We help businesses and institutions create a strong visual identity
-              through high-quality branded apparel and promotional products.
+              Whether you need branded t-shirts, staff uniforms, event merchandise,
+              banners, or corporate promotional items, we help bring your brand to
+              life with practical and professional solutions.
             </p>
           </div>
 
@@ -272,9 +327,18 @@ export default function Home() {
             <h3 className="text-3xl font-black">Why Businesses Choose Us</h3>
             <div className="mt-10 space-y-7">
               {[
-                ["Quality Assurance", "Every project is handled with strict attention to detail and production standards."],
-                ["Bulk Order Capability", "Structured systems for handling large institutional and corporate orders."],
-                ["Reliable Delivery", "Efficient timelines and dependable communication from start to finish."],
+                [
+                  "Quality-Focused Service",
+                  "Every project is handled with attention to detail, design presentation, and production requirements.",
+                ],
+                [
+                  "Bulk Order Support",
+                  "We support larger orders for companies, schools, campaigns, institutions, and corporate teams.",
+                ],
+                [
+                  "Clear Communication",
+                  "Clients can request quotes directly through WhatsApp with order details, quantity, and deadlines.",
+                ],
               ].map(([title, text]) => (
                 <div key={title}>
                   <h4 className="text-xl font-bold text-[#D4AF37]">{title}</h4>
@@ -299,7 +363,7 @@ export default function Home() {
             <p className="mt-5 leading-8 text-gray-600">
               We provide professional uniforms, t-shirt printing, promotional
               products, and branding services for businesses, schools, NGOs,
-              hotels, and institutions.
+              hotels, restaurants, and institutions.
             </p>
           </div>
 
@@ -310,7 +374,8 @@ export default function Home() {
             <h2 className="mt-5 text-3xl font-black">Huduma za Uchapishaji na Branding</h2>
             <p className="mt-5 leading-8 text-gray-300">
               Tunatoa huduma za sare, uchapishaji wa t-shirt, vifaa vya matangazo,
-              na branding kwa makampuni, shule, NGO, hoteli, na taasisi mbalimbali.
+              mabango, na branding kwa makampuni, shule, NGO, hoteli, migahawa,
+              na taasisi mbalimbali.
             </p>
           </div>
         </div>
@@ -326,9 +391,10 @@ export default function Home() {
             <h2 className="mt-5 text-4xl font-black text-[#0A2540] md:text-5xl">
               Complete Printing & Branding Services
             </h2>
-            <p className="mt-5 text-gray-600">
-              Pricing depends on quantity, material, design, and delivery timeline.
-              Request a quote for accurate pricing.
+            <p className="mt-5 leading-8 text-gray-600">
+              Pricing depends on product type, quantity, material quality, print
+              method, design complexity, and delivery timeline. Request a custom
+              quote for accurate pricing.
             </p>
           </div>
 
@@ -353,19 +419,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHAT YOU CAN ORDER */}
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+                What You Can Order
+              </p>
+              <h2 className="mt-5 text-4xl font-black text-[#0A2540] md:text-5xl">
+                Products For Business, Events & Institutions
+              </h2>
+              <p className="mt-6 leading-8 text-gray-600">
+                From small branded items to bulk corporate orders, Lub Run Enterprises
+                can support different printing and branding needs.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {orderOptions.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 font-semibold text-[#0A2540]"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PORTFOLIO */}
-      <section id="portfolio" className="bg-white py-24">
+      <section id="portfolio" className="bg-gray-100 py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
-              Our Work
+              Branding & Printing Samples
             </p>
             <h2 className="mt-5 text-4xl font-black text-[#0A2540] md:text-5xl">
-              Professional Branding & Printing Solutions
+              Sample Visuals For Presentation
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              We provide high-quality branding solutions tailored for businesses,
-              institutions, schools, NGOs, hospitality brands, and corporate organizations.
+              These sample visuals show the type of branding, printing, uniforms,
+              and promotional products Lub Run Enterprises can provide. Real client
+              work can be added as projects are completed.
             </p>
           </div>
 
@@ -386,6 +484,37 @@ export default function Home() {
                   <h3 className="text-2xl font-black text-[#0A2540]">{item.title}</h3>
                   <p className="mt-4 leading-7 text-gray-600">{item.description}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 rounded-3xl border border-[#D4AF37]/40 bg-[#D4AF37]/10 p-6 text-sm leading-7 text-gray-700">
+            <strong className="text-[#0A2540]">Note:</strong> Sample images are for
+            presentation purposes. Final product appearance depends on material,
+            design, print method, product availability, and order specifications.
+          </div>
+        </div>
+      </section>
+
+      {/* SUITABLE FOR */}
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+              Suitable For
+            </p>
+            <h2 className="mt-5 text-4xl font-black text-[#0A2540] md:text-5xl">
+              Branding Support For Different Clients
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {suitableFor.map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl bg-[#0A2540] px-5 py-5 text-center font-bold text-white shadow-lg"
+              >
+                {item}
               </div>
             ))}
           </div>
@@ -434,17 +563,18 @@ export default function Home() {
               Trusted Branding & Printing Partner
             </h2>
             <p className="mt-8 text-lg leading-8 text-gray-300">
-              We combine premium quality, reliable turnaround, and professional service
-              to help businesses, institutions, and organizations strengthen their brand identity.
+              We combine quality-focused service, clear communication, and practical
+              branding solutions to help businesses, institutions, and organizations
+              strengthen their brand identity.
             </p>
           </div>
 
           <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {[
-              ["⚡", "Fast Delivery", "Reliable project turnaround for urgent and large-scale orders."],
-              ["🏆", "Premium Quality", "High-standard printing and branding solutions tailored for professionals."],
-              ["🤝", "Corporate Focus", "Specialized solutions for institutions, NGOs, schools, and companies."],
-              ["🎯", "Brand Excellence", "Helping businesses create strong, professional, and memorable branding."],
+              ["⚡", "Fast Communication", "Quick WhatsApp quote requests with clear order details."],
+              ["🏆", "Quality Focus", "Professional printing and branding solutions tailored for real business use."],
+              ["🤝", "Corporate Support", "Suitable for companies, schools, NGOs, hotels, and institutions."],
+              ["🎯", "Brand Presentation", "Helping clients create clean, professional, and memorable branded products."],
             ].map(([icon, title, text]) => (
               <div key={title} className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur">
                 <div className="text-5xl">{icon}</div>
@@ -467,8 +597,9 @@ export default function Home() {
               Request A Quote
             </h2>
             <p className="mt-8 text-lg leading-8 text-gray-300">
-              Tell us about your branding, uniforms, printing, or promotional material needs.
-              We will respond with pricing guidance based on quantity, material, and deadline.
+              Tell us about your branding, uniforms, printing, or promotional
+              material needs. We will respond with pricing guidance based on
+              quantity, material, product type, and deadline.
             </p>
 
             <div className="mt-10 space-y-5">
@@ -498,6 +629,7 @@ export default function Home() {
 
             <div className="mt-8 grid gap-5">
               <input
+                required
                 type="text"
                 value={quoteForm.name}
                 onChange={(e) => setQuoteForm({ ...quoteForm, name: e.target.value })}
@@ -506,10 +638,11 @@ export default function Home() {
               />
 
               <input
+                required
                 type="tel"
                 value={quoteForm.phone}
                 onChange={(e) => setQuoteForm({ ...quoteForm, phone: e.target.value })}
-                placeholder="Phone Number"
+                placeholder="Phone / WhatsApp Number"
                 className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
               />
 
@@ -517,12 +650,13 @@ export default function Home() {
                 type="email"
                 value={quoteForm.email}
                 onChange={(e) => setQuoteForm({ ...quoteForm, email: e.target.value })}
-                placeholder="Email Address"
+                placeholder="Email Address, optional"
                 className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
               />
 
               <div className="grid gap-5 md:grid-cols-2">
                 <select
+                  required
                   value={quoteForm.service}
                   onChange={(e) => setQuoteForm({ ...quoteForm, service: e.target.value })}
                   className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
@@ -533,9 +667,11 @@ export default function Home() {
                   <option value="Promotional Products">Promotional Products</option>
                   <option value="Bulk Printing">Bulk Printing</option>
                   <option value="Banners and Signage">Banners and Signage</option>
+                  <option value="Other Branding Service">Other Branding Service</option>
                 </select>
 
                 <input
+                  required
                   type="text"
                   value={quoteForm.quantity}
                   onChange={(e) => setQuoteForm({ ...quoteForm, quantity: e.target.value })}
@@ -556,7 +692,7 @@ export default function Home() {
                 value={quoteForm.message}
                 onChange={(e) => setQuoteForm({ ...quoteForm, message: e.target.value })}
                 rows={5}
-                placeholder="Tell us about your project..."
+                placeholder="Tell us about your design, colors, sizes, delivery location, or extra details..."
                 className="w-full rounded-2xl border border-gray-200 px-5 py-4 outline-none focus:border-[#D4AF37]"
               />
 
@@ -564,8 +700,13 @@ export default function Home() {
                 type="submit"
                 className="w-full cursor-pointer rounded-2xl bg-[#0A2540] px-6 py-4 font-bold text-white transition hover:scale-[1.02] hover:bg-[#071421]"
               >
-                Send Quote Request
+                Send Quote Request on WhatsApp
               </button>
+
+              <p className="text-center text-xs leading-6 text-gray-500">
+                Final pricing depends on quantity, material, design complexity,
+                print method, and delivery timeline.
+              </p>
             </div>
           </form>
         </div>
@@ -585,7 +726,8 @@ export default function Home() {
               </div>
             </div>
             <p className="mt-6 leading-7 text-gray-400">
-              Premium branding, printing, uniforms, promotional materials, and corporate identity solutions.
+              Premium branding, printing, uniforms, promotional materials, and
+              corporate identity solutions in Dar es Salaam, Tanzania.
             </p>
           </div>
 
@@ -596,18 +738,38 @@ export default function Home() {
               <li>Corporate Uniforms</li>
               <li>Promotional Products</li>
               <li>Bulk Printing</li>
-              <li>Branding Solutions</li>
+              <li>Banners & Signage</li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-bold text-[#D4AF37]">Quick Links</h4>
             <ul className="mt-6 space-y-4 text-gray-400">
-              <li><a href="#home" className="hover:text-[#D4AF37]">Home</a></li>
-              <li><a href="#about" className="hover:text-[#D4AF37]">About</a></li>
-              <li><a href="#services" className="hover:text-[#D4AF37]">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-[#D4AF37]">Portfolio</a></li>
-              <li><a href="#contact" className="hover:text-[#D4AF37]">Contact</a></li>
+              <li>
+                <a href="#home" className="hover:text-[#D4AF37]">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="hover:text-[#D4AF37]">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="hover:text-[#D4AF37]">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#portfolio" className="hover:text-[#D4AF37]">
+                  Samples
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-[#D4AF37]">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -621,14 +783,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 max-w-7xl border-t border-white/10 px-6 pt-8 text-center text-sm text-gray-500">
-          © 2026 Lub Run Enterprises. All rights reserved.
+        <div className="mx-auto mt-16 max-w-7xl border-t border-white/10 px-6 pt-8 text-center text-sm leading-7 text-gray-500">
+          <p>© 2026 Lub Run Enterprises. All rights reserved.</p>
+          <p className="mt-3">
+            Sample images are for presentation purposes. Real client work can be
+            added as completed projects become available.
+          </p>
         </div>
       </footer>
 
       {/* FLOATING WHATSAPP */}
       <a
-        href={`${whatsappBase}?text=Hello%20Lub%20Run%20Enterprises%2C%20I%20would%20like%20to%20request%20a%20quote.`}
+        href={`${whatsappBase}?text=${quickQuoteMessage}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-3xl text-white shadow-2xl transition hover:scale-110"
