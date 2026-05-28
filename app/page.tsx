@@ -645,7 +645,7 @@ Extra Details: ${quoteForm.message}`
 
           <form
             onSubmit={handleQuoteSubmit}
-            className="rounded-[2rem] bg-white p-8 text-black shadow-2xl md:p-10"
+            className="rounded-[2rem] bg-white/95 p-8 text-black shadow-2xl md:p-10"
           >
             <h3 className="text-2xl font-black text-[#0A2540]">Get a Custom Quote</h3>
             <p className="mt-2 text-sm text-gray-500">
@@ -822,7 +822,7 @@ Extra Details: ${quoteForm.message}`
         href={`${whatsappBase}?text=${quickQuoteMessage}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-3xl text-white shadow-2xl transition hover:scale-110"
+        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-2xl text-white shadow-2xl transition hover:scale-110 md:bottom-8 md:right-8 md:h-16 md:w-16 md:text-3xl"
         aria-label="Chat with Lub Run Enterprises on WhatsApp"
       >
         💬
