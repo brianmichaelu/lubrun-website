@@ -157,32 +157,37 @@ Extra Details: ${quoteForm.message}`
           </a>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden items-center gap-8 text-sm font-semibold text-white lg:flex">
-            <a href="/" className="transition hover:text-[#D4AF37]">   Home </a>
-              Home
-            </a>
-            <a href="#services" className="transition hover:text-[#D4AF37]">
-              Services
-            </a>
-            <a href="#portfolio" className="transition hover:text-[#D4AF37]">
-              Samples
-            </a>
-            <a href="#about" className="transition hover:text-[#D4AF37]">
-              About
-            </a>
-            <a href="#contact" className="transition hover:text-[#D4AF37]">
-              Contact
-            </a>
+          
+<nav className="hidden items-center gap-8 text-sm font-semibold text-white lg:flex">
+  <a href="/" className="transition hover:text-[#D4AF37]">
+    Home
+  </a>
 
-            <a
-              href={`${whatsappBase}?text=${quickQuoteMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-[#D4AF37] px-5 py-3 font-bold text-black transition hover:scale-105 hover:bg-[#c7a12c]"
-            >
-              Request Quote
-            </a>
-          </nav>
+  <a href="#services" className="transition hover:text-[#D4AF37]">
+    Services
+  </a>
+
+  <a href="#portfolio" className="transition hover:text-[#D4AF37]">
+    Samples
+  </a>
+
+  <a href="#about" className="transition hover:text-[#D4AF37]">
+    About
+  </a>
+
+  <a href="#contact" className="transition hover:text-[#D4AF37]">
+    Contact
+  </a>
+
+  <a
+    href={`${whatsappBase}?text=${quickQuoteMessage}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full bg-[#D4AF37] px-5 py-3 font-bold text-black transition hover:scale-105 hover:bg-[#c7a12c]"
+  >
+    Request Quote
+  </a>
+</nav>
 
           {/* MOBILE MENU BUTTON */}
           <button
