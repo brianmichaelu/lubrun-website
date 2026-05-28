@@ -182,7 +182,7 @@ Extra Details: ${quoteForm.message}`
       {/* HEADER */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071421]/95 shadow-lg backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-          <a href="/" className="flex items-center gap-3" onClick={}>
+          <a href="/" className="flex items-center gap-3" onClick={closeMobileMenu}>
             <Image
               src="/logo.png"
               alt="Lub Run Enterprises logo"
