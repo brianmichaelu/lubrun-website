@@ -407,7 +407,7 @@ Extra Details: ${quoteForm.message}`
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="scroll-mt-28 bg-gray-100 py-24">
+      <section id="services" className="scroll-mt-28 bg-gray-100 py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
