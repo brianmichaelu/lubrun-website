@@ -818,15 +818,7 @@ Extra Details: ${quoteForm.message}`
       </footer>
 
       {/* FLOATING WHATSAPP */}
-      <a
-        href={`${whatsappBase}?text=${quickQuoteMessage}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-2xl text-white shadow-2xl transition hover:scale-110 lg:bottom-10 lg:left-10 lg:right-auto lg:h-14 lg:w-14 lg:text-2xl"
-        aria-label="Chat with Lub Run Enterprises on WhatsApp"
-      >
-        💬
-      </a>
+      
     </main>
   );
 }
