@@ -137,20 +137,20 @@ Extra Details: ${quoteForm.message}`
     <main className="scroll-smooth bg-white text-gray-900">
       {/* HEADER */}
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#071421]/95 shadow-lg backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
           <a href="#home" className="flex items-center gap-3" onClick={closeMobileMenu}>
             <Image
               src="/logo.png"
               alt="Lub Run Enterprises logo"
-              width={70}
-              height={70}
-              className="h-14 w-auto object-contain"
+              width={56}
+              height={56}
+              className="h-12 w-auto object-contain"
               priority
             />
 
             <div>
-              <h1 className="text-lg font-black tracking-wide text-white">LUB RUN</h1>
-              <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
+              <h1 className="text-base font-black tracking-wide text-white">LUB RUN</h1>
+              <p className="text-[10px] uppercase tracking-[0.25em] text-[#D4AF37]">
                 ENTERPRISES
               </p>
             </div>
@@ -199,19 +199,39 @@ Extra Details: ${quoteForm.message}`
         {isMenuOpen && (
           <div className="border-t border-white/10 bg-[#071421] px-6 py-5 text-white lg:hidden">
             <nav className="mx-auto grid max-w-7xl gap-2">
-              <a href="#home" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
+              <a
+                href="#home"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-4 py-3 hover:bg-white/10"
+              >
                 Home
               </a>
-              <a href="#services" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
+              <a
+                href="#services"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-4 py-3 hover:bg-white/10"
+              >
                 Services
               </a>
-              <a href="#portfolio" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
+              <a
+                href="#portfolio"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-4 py-3 hover:bg-white/10"
+              >
                 Samples
               </a>
-              <a href="#about" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
+              <a
+                href="#about"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-4 py-3 hover:bg-white/10"
+              >
                 About
               </a>
-              <a href="#contact" onClick={closeMobileMenu} className="rounded-xl px-4 py-3 hover:bg-white/10">
+              <a
+                href="#contact"
+                onClick={closeMobileMenu}
+                className="rounded-xl px-4 py-3 hover:bg-white/10"
+              >
                 Contact
               </a>
 
@@ -242,7 +262,7 @@ Extra Details: ${quoteForm.message}`
               Printing • Branding • Uniforms • Promotional Products
             </span>
 
-            <h1 className="mt-8 max-w-5xl text-5xl font-black leading-tight tracking-tight text-white md:text-7xl">
+            <h1 className="mt-8 max-w-5xl text-4xl font-black leading-tight tracking-tight text-white md:text-6xl">
               Premium Printing, Branding & Corporate Identity Solutions
             </h1>
 
@@ -302,7 +322,7 @@ Extra Details: ${quoteForm.message}`
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="mx-auto max-w-7xl px-6 py-24">
+      <section id="about" className="scroll-mt-28 mx-auto max-w-7xl px-6 py-24">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
@@ -382,7 +402,7 @@ Extra Details: ${quoteForm.message}`
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="bg-gray-100 py-24">
+      <section id="services" className="scroll-mt-28 bg-gray-100 py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
@@ -451,7 +471,7 @@ Extra Details: ${quoteForm.message}`
       </section>
 
       {/* PORTFOLIO */}
-      <section id="portfolio" className="bg-gray-100 py-24">
+      <section id="portfolio" className="scroll-mt-28 bg-gray-100 py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
@@ -587,7 +607,7 @@ Extra Details: ${quoteForm.message}`
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="bg-[#0A2540] py-24 text-white">
+      <section id="contact" className="scroll-mt-28 bg-[#0A2540] py-24 text-white">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
