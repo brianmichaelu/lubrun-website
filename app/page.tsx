@@ -612,8 +612,8 @@ Extra Details: ${quoteForm.message}`
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="scroll-mt-28 bg-[#0A2540] py-24 text-white">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2">
+      <section id="contact" className="scroll-mt-40 bg-[#0A2540] py-24 text-white">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
               Contact Us
@@ -822,7 +822,7 @@ Extra Details: ${quoteForm.message}`
         href={`${whatsappBase}?text=${quickQuoteMessage}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-2xl text-white shadow-2xl transition hover:scale-110 md:bottom-8 md:right-8 md:h-16 md:w-16 md:text-3xl"
+        className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-2xl text-white shadow-2xl transition hover:scale-110 lg:bottom-10 lg:right-10 lg:h-14 lg:w-14 lg:text-2xl"
         aria-label="Chat with Lub Run Enterprises on WhatsApp"
       >
         💬
